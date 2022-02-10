@@ -63,5 +63,22 @@ namespace RiderPractice
 
             return string.Join(",", list);
         }
+
+        /// <summary>
+        /// 修改參數順序、移除參數: Ctrl + R + S
+        /// </summary>
+        /// <returns></returns>
+        public void CtrlRS()
+        {
+            // 對 DoSomeThing 下 Ctrl+R+S，會跳出可以調整參數順序、移除參數的面版，一但改變，所有調用的函式都會跟著改
+            DoSomeThing(123, "abc", 0.5);
+            DoSomeThing(456, "def", 0.6);
+            DoSomeThing(789, "ghi", 0.7);
+        }
+
+        private void DoSomeThing(int number, string text, double doubleNum)
+        {
+            // do nothing
+        }
     }
 }
