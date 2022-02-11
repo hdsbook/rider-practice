@@ -80,5 +80,19 @@ namespace RiderPractice
         {
             // do nothing
         }
+
+        /// <summary>
+        /// 提取屬性: Ctrl+R+F
+        /// </summary>
+        public void CtrlRF()
+        {
+            // 對 myModel 下 Ctrl+R+F, 可以提取為類別的屬性
+            var myModel = new MyModel();
+        }
+
+    }
+    
+    public class MyModel
+    {
     }
 }
