@@ -31,7 +31,7 @@ namespace RiderPractice
         /// 修正錯誤回傳型態
         /// </summary>
         /// <param name="age"></param>
-        public void WrongResultType(int age)
+        public void FixWrongResultType(int age)
         {
             const int originPrice = 100;
             var discountedPrice = age >= 18 ? originPrice :  (int) Math.Ceiling(originPrice * 0.8);
