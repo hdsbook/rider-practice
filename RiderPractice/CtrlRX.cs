@@ -18,16 +18,18 @@ namespace RiderPractice
             var isNotAdult = age < 18;
             return isNotAdult;
         }
-        
+
         /// <summary>
-        /// 提取變數 Introduce Variable: Ctrl + R + V
+        /// 提取變數
         /// </summary>
         /// <param name="age"></param>
+        /// <param name="originPrice"></param>
         /// <returns></returns>
-        public bool IsAdult(int age)
+        public int GetDiscountedPrice(int age, int originPrice)
         {
-            // 反白 age >= 18，下Ctrl+R+V，提取變數為 isAdult
-            return age >= 18;
+            // 反白 return 後方的結果 (遊標在age變數上，按一下tab，會預設向後反白最大的區塊)
+            // 下 ctrl+R+V，可以提取變數
+            return age >= 5 ? originPrice : (int) Math.Ceiling(originPrice * 0.8);
         }
         
         /// <summary>

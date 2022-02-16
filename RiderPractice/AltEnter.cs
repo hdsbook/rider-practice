@@ -14,7 +14,7 @@ namespace RiderPractice
         /// <returns></returns>
         public int InvertIf(int age)
         {
-            const int ticketPrice = 100;
+            int ticketPrice = 100;
 
             // 對 if 下 alt+enter 可以選擇 invert if, 或是 convert to ?: statement
             if (age >= 18)
@@ -39,20 +39,6 @@ namespace RiderPractice
             // 對 discountedPrice 下 alt+enter 修正錯誤的回傳型態 (Change type of ... to int)
             // 這使我們可以在建立方法時都先宣告為 void，直到最後return時再快速決定回傳的型態為何
             return discountedPrice;
-        }
-
-        /// <summary>
-        /// 提取變數
-        /// </summary>
-        /// <param name="age"></param>
-        /// <returns></returns>
-        public int IntroduceVariable(int age)
-        {
-            const int originPrice = 100;
-
-            // 反白 return 後方的結果 (遊標在age變數上，按一下tab，會預設向後反白最大的區塊)
-            // 下 alt+enter，選擇 introduce variable，可以給複雜的運算式一個好懂的變數名稱(如 discountedPrice)
-            return age >= 18 ? originPrice : (int) Math.Ceiling(originPrice * 0.8);
         }
 
         /// <summary>
