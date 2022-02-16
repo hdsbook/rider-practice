@@ -78,18 +78,6 @@ namespace RiderPractice
         }
 
         /// <summary>
-        /// 提取參數
-        /// </summary>
-        public int IntroduceParameter()
-        {
-            const int originPrice = 100;
-
-            // 對 age 下 alt+enter，選擇 create parameter ... in containing method
-            var discountedPrice = age >= 18 ? originPrice : (int) Math.Ceiling(originPrice * 0.8);
-            return discountedPrice;
-        }
-
-        /// <summary>
         /// 建立類別
         /// </summary>
         public void IntroduceClass()
