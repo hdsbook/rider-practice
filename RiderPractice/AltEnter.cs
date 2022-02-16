@@ -72,7 +72,7 @@ namespace RiderPractice
             {
                 Name = "王小明",
                 Age = 18,
-                Gender = GenderEnum.Male,
+                Gender = MyGenderEnum.Male,
             };
         }
 
