@@ -2,8 +2,15 @@
 
 namespace RiderPractice
 {
+    /// <summary>
+    /// Postfix completion
+    /// 指標放在每一個函式的句末，tab展開
+    /// </summary>
     public class PostfixCompletion
     {
+        /// <summary>
+        /// 可以推遲「命名」這件事，專注在如何產生資料，最後再決定要命名為何
+        /// </summary>
         public void dotVar()
         {
             new User().var

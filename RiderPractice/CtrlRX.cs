@@ -20,7 +20,7 @@ namespace RiderPractice
         }
 
         /// <summary>
-        /// 提取變數
+        /// 提取變數 Variable: Ctrl + R + V
         /// </summary>
         /// <param name="age"></param>
         /// <param name="originPrice"></param>
@@ -67,7 +67,7 @@ namespace RiderPractice
         }
 
         /// <summary>
-        /// 修改參數順序、移除參數: Ctrl + R + S
+        /// 修改參數順序、移除參數 Signature: Ctrl + R + S
         /// </summary>
         /// <returns></returns>
         public void CtrlRS()
@@ -90,11 +90,16 @@ namespace RiderPractice
         {
             // 對 myModel 下 Ctrl+R+F, 可以提取為類別的屬性
             var myModel = new MyModel();
+            myModel.DoSomething();
         }
 
     }
     
     public class MyModel
     {
+        public void DoSomething()
+        {
+            
+        }
     }
 }
