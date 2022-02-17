@@ -58,7 +58,7 @@ namespace RiderPractice
             else
             {
                 // 對 Math.Ceiling 下 alt+enter，選擇 cast to int
-                discountedPrice = (int) Math.Ceiling(originPrice * 0.8);
+                discountedPrice = Math.Ceiling(originPrice * 0.8);
             }
             
             return discountedPrice;
