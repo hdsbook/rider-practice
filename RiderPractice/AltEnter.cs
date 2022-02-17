@@ -40,6 +40,28 @@ namespace RiderPractice
             // 這使我們可以在建立方法時都先宣告為 void，直到最後return時再快速決定回傳的型態為何
             return discountedPrice;
         }
+        
+        /// <summary>
+        /// cast to int
+        /// </summary>
+        /// <param name="age"></param>
+        public int CastToType(int age)
+        {
+            const int originPrice = 100;
+            int discountedPrice;
+            
+            if (age >= 18)
+            {
+                discountedPrice = originPrice;
+            }
+            else
+            {
+                // 對 Math.Ceiling 下 alt+enter，選擇 cast to int
+                discountedPrice = (int) Math.Ceiling(originPrice * 0.8);
+            }
+            
+            return discountedPrice;
+        }
 
         /// <summary>
         /// 建立類別
@@ -48,13 +70,8 @@ namespace RiderPractice
         {
             // 對 MyClass 下 alt+enter 選擇 create nested type ... 快速建立類別
             // 選擇 create nested type 會建立在比較近的地方(函式正下方)，create type 會建立在較遠的地方
-            var userA = new MyClass
-            {
-
-            };
-
             // 也可以建立Enum，建立後的第一個步驟可以調整建立的類型 type/struct/enum
-            var myEnum = new MyEnum
+            var userA = new MyClass
             {
 
             };
@@ -96,12 +113,45 @@ namespace RiderPractice
         {
             public string Name { get; set; }
             public int Price { get; set; }
-            public int Discount { get; set; }
+            public decimal Discount { get; set; }
             public DateTime DueDate { get; set; }
             public DateTime CreatedAt { get; set; }
             public DateTime UpdatedAt { get; set; }
             public int CreateUserId { get; set; }
             public int UpdateUserId { get; set; }
+        }
+        
+        /// <summary>
+        /// 折分宣告與賦值語句 (希望某個變數可以改成是在外層宣告的時候可以用)
+        /// </summary>
+        public void SplitDeclaration()
+        {
+            if (true)
+            {
+                // 目標：把product的宣告移至外層(if之上)
+                // 對 product alt+enter，選擇 split variable declaration and move ... to outerscope
+                // 然後就可以把 product 的宣告移至更外層去
+                var product = new Product
+                {
+                    Name = "Book",
+                    Price = 100,
+                    Discount = 0.8m,
+                    DueDate = default,
+                    CreatedAt = default,
+                    UpdatedAt = default,
+                    CreateUserId = 0,
+                    UpdateUserId = 0
+                };
+            }
+        }
+
+        public string UseStringInterpolation()
+        {
+            const string name = "王小明";
+            const string message = "弄壞了";
+            const string machine = "洗衣機";
+            // 對 string.Format 下 alt+enter，選擇Use string interpolation 簡化寫法
+            return string.Format("{0}{1}{2}", name, message, machine);
         }
 
         /// <summary>
@@ -116,7 +166,6 @@ namespace RiderPractice
             var mchine = "洗衣機";
             return naem + messege + mchine;
         }
-
     }
 
 }
