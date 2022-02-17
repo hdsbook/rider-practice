@@ -3,7 +3,8 @@
 namespace RiderPractice
 {
     /// <summary>
-    /// 萬用鍵 Alt+Enter
+    /// 快速重構 萬用鍵 Alt+Enter
+    /// 讓我們可以專注在「要做什麼」其它的事情就交給「快速重構」幫我們做掉
     /// </summary>
     public class AltEnter
     {
